@@ -1,0 +1,45 @@
+###
+POST http://localhost:9000/api/users HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre": "Nombre",
+    "apellido": "Apellido",
+    "tipoDoc": "TI,CC,CE,PASATAPORTE", // Cualquiera de los tipos de documentos que se manejen
+    "docIdentidad": "NUMERO DE DOCUMENTO CON O SIN PUNTOS",
+    "correoElectronico": "CORREO@CORREO.com",
+    "celular": "NUMERO DE CELULAR",
+    "fechaNacimiento": "FECHA NACIMIENTO",
+    "archivo": "URL DEL ACHIVO"
+    
+}
+
+### 
+GET http://localhost:9000/api/users HTTP/1.1
+
+
+### 
+// DEBEMOS ESPECIFICAR EL ID DEL USUARIO QUE NECESITAMOS 
+GET http://localhost:9000/api/users/620fc800316c861312d54f4a HTTP/1.1
+
+
+###
+// DEBEMOS ESPECIFICAR EL ID DEL USUARIO QUE VAMOS ACTUALIZAR 
+PUT http://localhost:9000/api/users/620fc800316c861312d54f4a HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre": "Nombre",
+    "apellido": "Apellido",
+    "tipoDoc": "TI,CC,CE,PASATAPORTE", // Cualquiera de los tipos de documentos que se manejen
+    "docIdentidad": "NUMERO DE DOCUMENTO CON O SIN PUNTOS",
+    "correoElectronico": "CORREO@CORREO.com",
+    "celular": "NUMERO DE CELULAR",
+    "fechaNacimiento": "FECHA NACIMIENTO",
+    "archivo": "URL DEL ACHIVO"
+    
+}
+
+### 
+// DEBEMOS ESPECIFICAR EL ID DEL USUARIO QUE VA SER ELIMINADO 
+DELETE http://localhost:9000/api/users/620fc800316c861312d54f4a HTTP/1.1
